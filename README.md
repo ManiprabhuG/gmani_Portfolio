@@ -93,7 +93,6 @@ Portfolio/
 ├── style.js                # Time calculation algorithm & timeline simulation
 ├── time_travel.js          # Interactive CLI Time Travel script (Node.js readline)
 ├── 404.html                # Custom animated 404 Not Found error page
-├── Contact.md              # Contact form & automation specification document
 ├── Mani CV.pdf             # Downloadable professional curriculum vitae
 └── README.md               # Project documentation and developer guide
 ```
