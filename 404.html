@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+
+            background:linear-gradient(135deg,#f7fbff,#eef5ff);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            overflow:hidden;
+        }
+
+        .container{
+            width:100%;
+            max-width:900px;
+            text-align:center;
+            position:relative;
+            padding:40px;
+        }
+
+        .content{
+            position:relative;
+            z-index:5;
+        }
+
+        h1{
+            font-size:180px;
+            color:#0b5ed7;
+            font-weight:800;
+            line-height:1;
+            text-shadow:0 10px 30px rgba(0,0,0,.08);
+
+        }
+
+        h2{
+
+            margin-top:20px;
+            color:#173b6c;
+            font-size:38px;
+
+        }
+
+        p{
+
+            width:70%;
+            margin:25px auto;
+
+            color:#5d6d84;
+            line-height:1.8;
+            font-size:17px;
+
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            padding:16px 45px;
+
+            text-decoration:none;
+
+            background:#0b5ed7;
+
+            color:white;
+
+            border-radius:50px;
+
+            transition:.3s;
+
+            font-weight:600;
+
+            box-shadow:0 10px 25px rgba(11,94,215,.25);
+
+        }
+
+        .btn:hover{
+
+            transform:translateY(-5px);
+
+            background:#0849a6;
+
+        }
+
+        .blob{
+
+            position:absolute;
+            border-radius:50%;
+            filter:blur(10px);
+            animation:float 7s ease-in-out infinite;
+
+        }
+
+        .blob1{
+
+            width:280px;
+            height:280px;
+
+            background:#d9e9ff;
+
+            top:-80px;
+            left:-70px;
+
+        }
+
+        .blob2{
+
+            width:250px;
+            height:250px;
+
+            background:#b9d4ff;
+
+            right:-60px;
+            bottom:-60px;
+
+            animation-delay:2s;
+
+        }
+
+        @keyframes float{
+
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-25px);
+            }
+
+            100%{
+                transform:translateY(0px);
+            }
+
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:120px;
+            }
+
+            h2{
+                font-size:28px;
+            }
+
+            p{
+
+                width:100%;
+                font-size:15px;
+
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <div class="content">
+
+        <h1>404</h1>
+
+        <h2>Oops! Page Not Found</h2>
+
+        <p>
+            The page you're looking for doesn't exist,
+            has been moved, or is temporarily unavailable.
+        </p>
+
+        <a href="/" class="btn">
+            Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+<script> 
+    const number = document.querySelector("h1");
+
+    let scale = 1;
+
+    setInterval(() => {
+
+        scale = scale === 1 ? 1.05 : 1;
+
+        number.style.transform = `scale(${scale})`;
+
+    },800);
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
